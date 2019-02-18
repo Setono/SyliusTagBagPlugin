@@ -13,33 +13,56 @@
 [![Build Status][ico-travis]][link-travis]
 [![Quality Score][ico-code-quality]][link-code-quality]
 
-Plugin that integrates Setono/TagBagBundle into your Sylius project
+Plugin that integrates `Setono/TagBagBundle` into your Sylius project
 
 </p>
 
-## Installation
+## Making plugin requiring `Setono/TagBagBundle`
 
-### Step 1: Download the plugin
+### Configure `composer.json`
 
-Open a command console, enter your project directory and execute the following command to download the latest stable version of this plugin:
-
-```bash
-$ composer require setono/sylius-tag-bag-plugin
+```json
+{
+    "type": "sylius-plugin",
+    "keywords": ["sylius", "sylius-plugin", "setono-tagbag", "..."],
+    "require": {
+        "sylius/sylius": "^1.4.0",
+        "setono/tag-bag-bundle": "^0.2.0"
+    },
+    "suggest": {
+        "setono/sylius-tag-bag-plugin": "Use it if you don't want to override shop's layout.html.twig"
+    },
+    "require-dev": {
+        "setono/sylius-tag-bag-plugin": "^0.1.0"
+    }
+}
 ```
 
-This command requires you to have Composer installed globally, as explained in the [installation chapter](https://getcomposer.org/doc/00-intro.md) of the Composer documentation.
+Note, that `setono/sylius-tag-bag-plugin` should be development dependency to
+give your plugin user (application developer) a chance to not use it if he 
+already have overriden Shop's `layout.html.twig` in his application 
+with required by `Setono/TagBagBundle` (see https://github.com/Setono/TagBagBundle#usage).
 
+### Add next blocks to plugin's `README.md`
 
-### Step 2: Enable the plugin
+* Require library:
 
-Then, enable the plugin by adding it to the list of registered plugins/bundles
-in the `config/bundles.php` file of your project:
+```bash
+# Omit setono/sylius-tag-bag-plugin if you want to
+# override layout.html.twig as described at https://github.com/Setono/TagBagBundle#usage
+composer require your/plugin setono/sylius-tag-bag-plugin
+```
+
+* Include bundles: 
 
 ```php
 <?php
 # config/bundles.php
 return [
     // ...
+    Setono\TagBagBundle\SetonoTagBagBundle::class => ['all' => true],
+
+    // Use this bundle or override layout.html.twig as described at https://github.com/Setono/TagBagBundle#usage
     Setono\SyliusTagBagPlugin\SetonoSyliusTagBagPlugin::class => ['all' => true],
     // ...
 ];
