@@ -6,10 +6,8 @@
 
     <services>
 
-        <service id="app.event_subscriber.shop"
-                 class="AppBundle\EventSubscriber\ShopEventsSubscriber"
-                 public="true">
-            <argument type="service" id="session.tag_bag"/>
+        <service id="app.event_subscriber.shop" class="AppBundle\EventSubscriber\ShopEventsSubscriber">
+            <argument type="service" id="setono_tag_bag.tag_bag"/>
             <tag name="kernel.event_subscriber" />
         </service>
 

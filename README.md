@@ -13,11 +13,11 @@
 [![Build Status][ico-travis]][link-travis]
 [![Quality Score][ico-code-quality]][link-code-quality]
 
-Plugin that integrates `Setono/TagBagBundle` into your Sylius project
+Plugin that integrates the [TagBagBundle](https://github.com/Setono/TagBagBundle) into your Sylius project
 
 </p>
 
-## Making plugin requiring `Setono/TagBagBundle`
+## Making plugin requiring TagBagBundle
 
 ### Configure `composer.json`
 
@@ -33,15 +33,15 @@ Plugin that integrates `Setono/TagBagBundle` into your Sylius project
         "setono/sylius-tag-bag-plugin": "Use it if you don't want to override shop's layout.html.twig"
     },
     "require-dev": {
-        "setono/sylius-tag-bag-plugin": "^0.1.0"
+        "setono/sylius-tag-bag-plugin": "^1.0"
     }
 }
 ```
 
 Note, that `setono/sylius-tag-bag-plugin` should be development dependency to
 give your plugin user (application developer) a chance to not use it if he 
-already have overriden Shop's `layout.html.twig` in his application 
-with required by `Setono/TagBagBundle` (see https://github.com/Setono/TagBagBundle#usage).
+already have overriden the shop's `layout.html.twig` in his application 
+which is required by `Setono/TagBagBundle` (see [github.com/Setono/TagBagBundle#usage](https://github.com/Setono/TagBagBundle#usage)).
 
 ### Add next blocks to plugin's `README.md`
 
@@ -58,6 +58,7 @@ composer require your/plugin setono/sylius-tag-bag-plugin
 ```php
 <?php
 # config/bundles.php
+
 return [
     // ...
     Setono\TagBagBundle\SetonoTagBagBundle::class => ['all' => true],
@@ -74,7 +75,7 @@ return [
 
 * Run `composer try` to run test application
 * Navigate to any product (http://localhost:8000/en_US/products/book)
-* You will see javascript alert added to tagbag by `app.event_subscriber.shop`
+* You will see javascript alert added to the tag bag by `app.event_subscriber.shop`
 
 ### Contributing
 
