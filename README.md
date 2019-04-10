@@ -1,12 +1,4 @@
-<p align="center">
-    <a href="https://sylius.com" target="_blank">
-        <img src="https://demo.sylius.com/assets/shop/img/logo.png" />
-    </a>
-</p>
-
-<h1 align="center">SetonoSyliusTagBagPlugin</h1>
-
-<p align="center">
+# Sylius Tag Bag Plugin
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
@@ -14,8 +6,6 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 
 Plugin that integrates the [TagBagBundle](https://github.com/Setono/TagBagBundle) into your Sylius project
-
-</p>
 
 ## Making plugin requiring TagBagBundle
 
