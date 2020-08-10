@@ -23,14 +23,14 @@
         {{ sonata_block_render_event('sylius.shop.layout.stylesheets') }}
     {% endblock %}
 
-    {{ setono_tag_bag_head_tags() }}
+    {{ setono_tag_bag_render_head() }}
 
     {{ sonata_block_render_event('sylius.shop.layout.head') }}
 </head>
 
 <body class="pushable">
 
-{{ setono_tag_bag_body_begin_tags() }}
+{{ setono_tag_bag_render_body_begin() }}
 
 {{ sonata_block_render_event('sylius.shop.layout.before_body') }}
 <div class="pusher">
@@ -75,7 +75,8 @@
     {% endblock %}
 </div>
 
-{{ setono_tag_bag_body_end_tags() }}
+{{ setono_tag_bag_render_body_end() }}
+{{ setono_tag_bag_render_all() }}
 
 {% block javascripts %}
     {% include '@SyliusUi/_javascripts.html.twig' with {'path': 'assets/shop/js/app.js'} %}

@@ -17,7 +17,7 @@ Plugin that integrates the [TagBagBundle](https://github.com/Setono/TagBagBundle
     "keywords": ["sylius", "sylius-plugin", "setono-tagbag", "..."],
     "require": {
         "sylius/sylius": "^1.4.0",
-        "setono/tag-bag-bundle": "^0.2.0"
+        "setono/tag-bag-bundle": "^2.0"
     },
     "suggest": {
         "setono/sylius-tag-bag-plugin": "Use it if you don't want to override shop's layout.html.twig"

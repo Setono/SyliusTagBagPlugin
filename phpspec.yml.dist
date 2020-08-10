@@ -1,4 +1,0 @@
-suites:
-    main:
-        namespace: Setono\SyliusTagBagPlugin
-        psr4_prefix: Setono\SyliusTagBagPlugin

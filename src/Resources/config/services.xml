@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<container xmlns="http://symfony.com/schema/dic/services"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://symfony.com/schema/dic/services"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-
     <services>
         <service id="setono_sylius_tag_bag.block_event_listener.shop.layout.head"
                  class="Sylius\Bundle\UiBundle\Block\BlockEventListener">
             <argument>@SetonoSyliusTagBagPlugin/Shop/Layout/_head.html.twig</argument>
-            <tag name="kernel.event_listener" event="sonata.block.event.sylius.shop.layout.head" method="onBlockEvent" />
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.shop.layout.head" method="onBlockEvent"/>
         </service>
 
         <service id="setono_sylius_tag_bag.block_event_listener.shop.layout.before_body"
                  class="Sylius\Bundle\UiBundle\Block\BlockEventListener">
             <argument>@SetonoSyliusTagBagPlugin/Shop/Layout/_before_body.html.twig</argument>
-            <tag name="kernel.event_listener" event="sonata.block.event.sylius.shop.layout.before_body" method="onBlockEvent" />
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.shop.layout.before_body"
+                 method="onBlockEvent"/>
         </service>
 
         <service id="setono_sylius_tag_bag.block_event_listener.shop.layout.after_body"
                  class="Sylius\Bundle\UiBundle\Block\BlockEventListener">
             <argument>@SetonoSyliusTagBagPlugin/Shop/Layout/_after_body.html.twig</argument>
-            <tag name="kernel.event_listener" event="sonata.block.event.sylius.shop.layout.after_body" method="onBlockEvent" />
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.shop.layout.after_body"
+                 method="onBlockEvent"/>
         </service>
-
     </services>
-
 </container>
