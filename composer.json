@@ -2,31 +2,22 @@
     "name": "setono/sylius-tag-bag-plugin",
     "type": "sylius-plugin",
     "description": "Plugin that integrates Setono/TagBagBundle into your Sylius project",
-    "keywords": [
-        "sylius",
-        "sylius-plugin"
-    ],
     "license": "MIT",
     "require": {
-        "php": ">=7.3",
-        "setono/tag-bag-bundle": "^2.0",
+        "php": ">=7.4",
+        "setono/tag-bag-bundle": "^2.0 || ^3.0",
         "sylius/sylius": "^1.4"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master",
+        "roave/security-advisories": "dev-latest",
         "setono/code-quality-pack": "^1.3.1",
         "symfony/debug-bundle": "^4.4 || ^5.1",
         "symfony/dotenv": "^4.4 || ^5.1",
         "symfony/intl": "^4.4 || ^5.1",
-        "symfony/web-profiler-bundle": "^5.0.11"
+        "symfony/web-profiler-bundle": "^4.4 || ^5.1"
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0-dev"
-        }
     },
     "autoload": {
         "psr-4": {
